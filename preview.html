@@ -17,17 +17,21 @@
 
         /* Header */
         .header { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
-        .navbar { padding: 1rem 0; }
+        .navbar { padding: 0.5rem 0; }
         .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
         
-        /* Logo */
-        .brand-logo { display: flex; flex-direction: column; align-items: center; gap: 2px; transition: all 0.3s; }
-        .brand-logo:hover { transform: scale(1.05); }
-        .logo-diamond { width: 32px; height: 24px; }
-        .logo-diamond svg { width: 100%; height: 100%; }
-        .logo-text { display: flex; flex-direction: column; align-items: center; line-height: 1; }
-        .logo-hk { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; font-style: italic; font-weight: 600; color: #b8956a; line-height: 1; }
-        .logo-sparkles { font-family: 'Poppins', Arial, sans-serif; font-size: 0.55rem; letter-spacing: 3px; color: #2c2c2c; font-weight: 500; margin-top: 2px; }
+        /* Real Logo Image */
+        .logo-link { display: block; }
+        .nav-logo-img { 
+            height: 70px; 
+            width: auto; 
+            transition: all 0.3s; 
+            display: block;
+        }
+        .nav-logo-img:hover { 
+            transform: scale(1.05); 
+            opacity: 0.9; 
+        }
 
         .nav-menu { display: flex; list-style: none; gap: 2.5rem; }
         .nav-link { font-size: 0.95rem; font-weight: 500; color: #333; position: relative; }
@@ -35,41 +39,97 @@
         .nav-link:hover { color: #b8956a; }
         .nav-link:hover::after { width: 100%; }
         .nav-icons { display: flex; gap: 1.5rem; align-items: center; }
-        .icon-link { color: #333; position: relative; }
+        .icon-link { color: #333; font-size: 1.3rem; position: relative; }
         .icon-link:hover { color: #b8956a; }
         .cart-count { position: absolute; top: -8px; right: -8px; background: #b8956a; color: white; font-size: 0.7rem; font-weight: 600; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
         .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
-        .bar { width: 25px; height: 3px; background: #2c2c2c; transition: all 0.3s; }
+        .bar { width: 25px; height: 3px; background: #2c2c2c; }
 
         /* Hero Section */
-        .hero { min-height: 90vh; background: #ebe0d3; display: flex; align-items: center; position: relative; margin-top: 80px; overflow: hidden; }
-        .hero-logo-watermark { position: absolute; top: 50%; left: 25%; transform: translate(-50%,-50%); width: 500px; height: 600px; opacity: 0.08; z-index: 1; pointer-events: none; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .watermark-diamond { width: 200px; height: 160px; margin-bottom: 20px; color: #8b6f47; }
-        .watermark-diamond svg { width: 100%; height: 100%; }
-        .watermark-hk { font-family: 'Playfair Display', Georgia, serif; font-size: 12rem; font-style: italic; font-weight: 600; color: #8b6f47; line-height: 0.9; }
-        .watermark-sparkles { font-family: 'Poppins', Arial, sans-serif; font-size: 2rem; letter-spacing: 12px; color: #8b6f47; font-weight: 400; }
+        .hero { 
+            min-height: 90vh; 
+            background: #ebe0d3; 
+            display: flex; 
+            align-items: center; 
+            position: relative; 
+            margin-top: 90px; 
+            overflow: hidden; 
+        }
+
+        /* Watermark Logo Background */
+        .hero-watermark-logo {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: auto;
+            opacity: 0.08;
+            z-index: 1;
+            pointer-events: none;
+        }
         
-        .hero-content { position: relative; z-index: 5; max-width: 1400px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: 90vh; }
+        .hero-content { 
+            position: relative; 
+            z-index: 5; 
+            max-width: 1400px; 
+            width: 100%; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            align-items: center; 
+            min-height: 90vh; 
+        }
         .hero-text { padding: 4rem 4rem 4rem 6rem; }
         
-        .hero-brand-mark { display: flex; flex-direction: column; align-items: flex-start; margin-bottom: 1.5rem; }
-        .brand-mark-diamond { width: 50px; height: 42px; margin-bottom: 4px; }
-        .brand-mark-diamond svg { width: 100%; height: 100%; }
-        .brand-hk { font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; font-style: italic; font-weight: 600; color: #b8956a; line-height: 1; }
-        .brand-sparkles { font-family: 'Poppins', Arial, sans-serif; font-size: 0.7rem; letter-spacing: 4px; color: #b8956a; font-weight: 500; margin-top: 4px; display: block; }
+        /* Brand Logo above title */
+        .hero-brand-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 2rem;
+            display: block;
+        }
         
-        .hero-subtitle { font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 2rem; display: block; color: #a08968; font-weight: 400; }
-        .hero-title, .hero-title-2 { font-size: 5rem; font-weight: 400; line-height: 1.1; color: #2c2c2c; }
+        .hero-subtitle { 
+            font-size: 0.8rem; 
+            letter-spacing: 4px; 
+            text-transform: uppercase; 
+            margin-bottom: 2rem; 
+            display: block; 
+            color: #a08968; 
+            font-weight: 400; 
+        }
+        .hero-title, .hero-title-2 { 
+            font-size: 5rem; 
+            font-weight: 400; 
+            line-height: 1.1; 
+            color: #2c2c2c; 
+        }
         .hero-title { margin-bottom: 0; }
         .hero-title-2 { margin-bottom: 2rem; }
         .gold-italic { color: #b8956a; font-style: italic; }
-        .hero-description { font-size: 1.15rem; margin-bottom: 3rem; line-height: 1.6; color: #5a4a3a; font-weight: 300; }
+        .hero-description { 
+            font-size: 1.15rem; 
+            margin-bottom: 3rem; 
+            line-height: 1.6; 
+            color: #5a4a3a; 
+            font-weight: 300; 
+        }
         
         .hero-image { height: 90vh; width: 100%; overflow: hidden; }
         .hero-model { width: 100%; height: 100%; object-fit: cover; }
         
         .hero-buttons { display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; }
-        .btn { padding: 1.1rem 2.5rem; border: none; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.3s; display: inline-block; text-transform: uppercase; letter-spacing: 2px; }
+        .btn { 
+            padding: 1.1rem 2.5rem; 
+            border: none; 
+            font-size: 0.85rem; 
+            font-weight: 500; 
+            cursor: pointer; 
+            transition: all 0.3s; 
+            display: inline-block; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+        }
         .btn-primary { background: #1a1a1a; color: white; }
         .btn-primary:hover { background: #b8956a; transform: translateY(-2px); }
         .btn-link { background: transparent; color: #2c2c2c; padding: 1.1rem 1rem; }
@@ -85,7 +145,7 @@
         .categories { background: #f9f9f9; }
         .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
         .category-card { position: relative; overflow: hidden; border-radius: 10px; cursor: pointer; box-shadow: 0 2px 15px rgba(0,0,0,0.1); transition: all 0.3s; }
-        .category-card:hover { transform: translateY(-10px); }
+        .category-card:hover { transform: translateY(-10px); box-shadow: 0 5px 25px rgba(0,0,0,0.15); }
         .category-image { position: relative; height: 400px; overflow: hidden; }
         .category-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
         .category-card:hover .category-image img { transform: scale(1.1); }
@@ -148,7 +208,13 @@
         /* Footer */
         .footer { background: #2c2c2c; color: white; padding: 4rem 0 2rem; }
         .footer-content { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-        .footer-column h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .footer-logo-img {
+            height: 90px;
+            width: auto;
+            margin-bottom: 1rem;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+        }
         .footer-column h4 { font-size: 1.2rem; margin-bottom: 1.5rem; }
         .footer-column p { line-height: 1.8; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; }
         .footer-column ul { list-style: none; }
@@ -156,29 +222,34 @@
         .footer-column ul li a { color: rgba(255,255,255,0.8); }
         .footer-column ul li a:hover { color: #b8956a; padding-left: 5px; }
         .social-links { display: flex; gap: 1rem; }
-        .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .social-links a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; font-size: 1.2rem; }
         .social-links a:hover { background: #b8956a; transform: translateY(-3px); }
         .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
 
         /* Responsive */
         @media (max-width: 1024px) {
+            .nav-logo-img { height: 55px; }
             .hero-content { grid-template-columns: 1fr; }
             .hero-text { padding: 3rem 2rem; text-align: center; }
             .hero-title, .hero-title-2 { font-size: 3rem; }
             .hero-image { height: 500px; }
-            .hero-buttons, .hero-brand-mark { justify-content: center; align-items: center; margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .hero-brand-logo { margin-left: auto; margin-right: auto; }
             .collection-grid { grid-template-columns: 1fr; }
             .collection-card.large { grid-row: span 1; height: 450px; }
             .about-content { grid-template-columns: 1fr; }
-            .watermark-hk { font-size: 9rem; }
+            .hero-watermark-logo { width: 350px; left: 50%; opacity: 0.05; }
         }
         @media (max-width: 768px) {
+            .nav-logo-img { height: 50px; }
             .nav-menu { display: none; }
             .hamburger { display: flex; }
             .hero-title, .hero-title-2 { font-size: 2.5rem; }
+            .hero-brand-logo { width: 90px; }
             .footer-content { grid-template-columns: 1fr; }
             .newsletter-form { flex-direction: column; }
             .about-features { grid-template-columns: 1fr; }
+            .hero-watermark-logo { width: 250px; }
         }
         html { scroll-behavior: smooth; }
         ::selection { background: #b8956a; color: white; }
@@ -190,20 +261,7 @@
             <div class="nav-container">
                 <div class="logo">
                     <a href="#" class="logo-link">
-                        <div class="brand-logo">
-                            <div class="logo-diamond">
-                                <svg viewBox="0 0 40 30">
-                                    <polygon points="20,2 8,12 14,26 20,28 26,26 32,12" fill="none" stroke="#b8956a" stroke-width="1.5"/>
-                                    <line x1="8" y1="12" x2="32" y2="12" stroke="#b8956a" stroke-width="1.2"/>
-                                    <line x1="14" y1="26" x2="20" y2="2" stroke="#b8956a" stroke-width="0.8"/>
-                                    <line x1="26" y1="26" x2="20" y2="2" stroke="#b8956a" stroke-width="0.8"/>
-                                </svg>
-                            </div>
-                            <div class="logo-text">
-                                <span class="logo-hk">HK</span>
-                                <span class="logo-sparkles">SPARKLES</span>
-                            </div>
-                        </div>
+                        <img src="logo.png" alt="Hksparkle Logo" class="nav-logo-img" onerror="this.onerror=null; this.src='logo.jpg';">
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -218,33 +276,24 @@
                     <a href="#" class="icon-link">👤</a>
                     <a href="#" class="icon-link">🛒<span class="cart-count">0</span></a>
                 </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-logo-watermark">
-            <div class="watermark-diamond">
-                <svg viewBox="0 0 100 80">
-                    <polygon points="50,5 20,30 35,70 50,75 65,70 80,30" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <line x1="20" y1="30" x2="80" y2="30" stroke="currentColor" stroke-width="1.5"/>
-                </svg>
-            </div>
-            <div class="watermark-hk">HK</div>
-            <div class="watermark-sparkles">SPARKLES</div>
-        </div>
+        <!-- Watermark Logo -->
+        <img src="logo.png" alt="" class="hero-watermark-logo" onerror="this.onerror=null; this.src='logo.jpg';">
+
         <div class="hero-content">
             <div class="hero-text">
-                <div class="hero-brand-mark">
-                    <div class="brand-mark-diamond">
-                        <svg viewBox="0 0 60 50">
-                            <polygon points="30,3 12,18 22,42 30,45 38,42 48,18" fill="none" stroke="#b8956a" stroke-width="1.8"/>
-                            <line x1="12" y1="18" x2="48" y2="18" stroke="#b8956a" stroke-width="1.3"/>
-                        </svg>
-                    </div>
-                    <span class="brand-hk">HK</span>
-                    <span class="brand-sparkles">SPARKLES</span>
-                </div>
+                <!-- Brand Logo above title -->
+                <img src="logo.png" alt="Hksparkle" class="hero-brand-logo" onerror="this.onerror=null; this.src='logo.jpg';">
+                
                 <span class="hero-subtitle">TIMELESS BEAUTY. MODERN YOU.</span>
                 <h2 class="hero-title">A Symphony of</h2>
                 <h2 class="hero-title-2"><span class="gold-italic">Brilliance</span> and Elegance</h2>
@@ -255,7 +304,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=1200&h=900&fit=crop&q=90" alt="Hksparkle Model" class="hero-model">
+                <img src="model.jpg" alt="Hksparkle Jewelry Model" class="hero-model" onerror="this.onerror=null; this.src='model.png';">
             </div>
         </div>
     </section>
@@ -269,31 +318,31 @@
             <div class="category-grid">
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&h=800&fit=crop" alt="Women">
-                        <div class="category-overlay"><a href="#" class="category-link">Shop Women</a></div>
+                        <img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=600&h=800&fit=crop" alt="Earrings">
+                        <div class="category-overlay"><a href="#" class="category-link">Shop Earrings</a></div>
                     </div>
-                    <h3 class="category-name">Women</h3>
+                    <h3 class="category-name">Earrings</h3>
                 </div>
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=600&h=800&fit=crop" alt="Men">
-                        <div class="category-overlay"><a href="#" class="category-link">Shop Men</a></div>
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=800&fit=crop" alt="Necklaces">
+                        <div class="category-overlay"><a href="#" class="category-link">Shop Necklaces</a></div>
                     </div>
-                    <h3 class="category-name">Men</h3>
+                    <h3 class="category-name">Necklaces</h3>
                 </div>
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600&h=800&fit=crop" alt="Accessories">
-                        <div class="category-overlay"><a href="#" class="category-link">Shop Accessories</a></div>
+                        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&h=800&fit=crop" alt="Rings">
+                        <div class="category-overlay"><a href="#" class="category-link">Shop Rings</a></div>
                     </div>
-                    <h3 class="category-name">Accessories</h3>
+                    <h3 class="category-name">Rings</h3>
                 </div>
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&h=800&fit=crop" alt="Shoes">
-                        <div class="category-overlay"><a href="#" class="category-link">Shop Shoes</a></div>
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&h=800&fit=crop" alt="Bracelets">
+                        <div class="category-overlay"><a href="#" class="category-link">Shop Bracelets</a></div>
                     </div>
-                    <h3 class="category-name">Shoes</h3>
+                    <h3 class="category-name">Bracelets</h3>
                 </div>
             </div>
         </div>
@@ -308,43 +357,43 @@
             <div class="product-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=700&fit=crop" alt="Product">
+                        <img src="https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?w=500&h=700&fit=crop" alt="Product">
                         <span class="product-badge">New</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Elegant Summer Dress</h3>
+                        <h3 class="product-name">Diamond Drop Earrings</h3>
                         <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(124)</span></div>
                         <p class="product-price"><span class="current-price">$89.99</span><span class="original-price">$129.99</span></p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500&h=700&fit=crop" alt="Product">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=700&fit=crop" alt="Product">
                         <span class="product-badge sale">Sale</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Premium Leather Jacket</h3>
+                        <h3 class="product-name">Pearl Necklace Set</h3>
                         <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(89)</span></div>
                         <p class="product-price"><span class="current-price">$199.99</span><span class="original-price">$299.99</span></p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&h=700&fit=crop" alt="Product">
+                        <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=500&h=700&fit=crop" alt="Product">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Designer Handbag</h3>
+                        <h3 class="product-name">Gold Statement Ring</h3>
                         <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(156)</span></div>
                         <p class="product-price"><span class="current-price">$149.99</span></p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&h=700&fit=crop" alt="Product">
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=500&h=700&fit=crop" alt="Product">
                         <span class="product-badge">New</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Classic Oxford Shirt</h3>
+                        <h3 class="product-name">Tennis Bracelet</h3>
                         <div class="product-rating"><span class="stars">★★★★★</span><span class="rating-count">(203)</span></div>
                         <p class="product-price"><span class="current-price">$59.99</span></p>
                     </div>
@@ -361,26 +410,26 @@
             </div>
             <div class="collection-grid">
                 <div class="collection-card large">
-                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=1000&fit=crop" alt="Summer">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&h=1000&fit=crop" alt="Bridal">
                     <div class="collection-content">
-                        <h3>Summer Essentials</h3>
-                        <p>Light & breezy styles</p>
+                        <h3>Bridal Collection</h3>
+                        <p>Timeless pieces for your special day</p>
                         <a href="#" class="collection-btn">Explore Collection</a>
                     </div>
                 </div>
                 <div class="collection-card">
-                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500&h=700&fit=crop" alt="Formal">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500&h=700&fit=crop" alt="Daily">
                     <div class="collection-content">
-                        <h3>Formal Wear</h3>
-                        <p>Elegant & sophisticated</p>
+                        <h3>Daily Wear</h3>
+                        <p>Elegant for everyday</p>
                         <a href="#" class="collection-btn">Shop Now</a>
                     </div>
                 </div>
                 <div class="collection-card">
-                    <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=500&h=700&fit=crop" alt="Casual">
+                    <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=500&h=700&fit=crop" alt="Statement">
                     <div class="collection-content">
-                        <h3>Casual Chic</h3>
-                        <p>Everyday comfort</p>
+                        <h3>Statement Pieces</h3>
+                        <p>Bold & beautiful</p>
                         <a href="#" class="collection-btn">Shop Now</a>
                     </div>
                 </div>
@@ -393,28 +442,28 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About Hksparkle</h2>
-                    <p>At Hksparkle, we believe that fashion is more than just clothing—it's a form of self-expression. Since our inception, we've been dedicated to bringing you the latest trends, timeless classics, and premium quality pieces.</p>
-                    <p>Our curated collections feature carefully selected items from around the world, ensuring that every piece meets our high standards.</p>
+                    <p>At Hksparkle, we believe that jewelry is more than just an accessory—it's a form of self-expression. Every piece in our collection is carefully crafted to celebrate the unique beauty within you.</p>
+                    <p>Our curated collections feature carefully selected pieces from around the world, ensuring that every item meets our high standards of quality, design, and elegance.</p>
                     <div class="about-features">
                         <div class="feature">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                             <h4>Premium Quality</h4>
-                            <p>Carefully selected materials</p>
+                            <p>Finest materials</p>
                         </div>
                         <div class="feature">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                             <h4>Fast Shipping</h4>
-                            <p>Delivered in 3-5 days</p>
+                            <p>3-5 days delivery</p>
                         </div>
                         <div class="feature">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
                             <h4>Easy Returns</h4>
-                            <p>30-day return policy</p>
+                            <p>30-day policy</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=700&h=900&fit=crop" alt="About">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=700&h=900&fit=crop" alt="About">
                 </div>
             </div>
         </div>
@@ -435,8 +484,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Hksparkle</h3>
-                    <p>Your destination for premium fashion and lifestyle products. Elegance meets style.</p>
+                    <img src="logo.png" alt="Hksparkle" class="footer-logo-img" onerror="this.onerror=null; this.src='logo.jpg';">
+                    <p>Your destination for premium jewelry. Where elegance meets timeless beauty.</p>
                     <div class="social-links">
                         <a href="#">📘</a>
                         <a href="#">📷</a>
@@ -446,7 +495,7 @@
                 </div>
                 <div class="footer-column">
                     <h4>Shop</h4>
-                    <ul><li><a href="#">Women's Fashion</a></li><li><a href="#">Men's Fashion</a></li><li><a href="#">Accessories</a></li><li><a href="#">Shoes</a></li><li><a href="#">Sale</a></li></ul>
+                    <ul><li><a href="#">Earrings</a></li><li><a href="#">Necklaces</a></li><li><a href="#">Rings</a></li><li><a href="#">Bracelets</a></li><li><a href="#">Sale</a></li></ul>
                 </div>
                 <div class="footer-column">
                     <h4>Customer Service</h4>
@@ -458,7 +507,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Hksparkle. All rights reserved. Made with ❤️ for fashion lovers.</p>
+                <p>&copy; 2026 Hksparkle. All rights reserved. Made with ❤️ for jewelry lovers.</p>
             </div>
         </div>
     </footer>
@@ -478,11 +527,11 @@
         // Newsletter
         document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for subscribing! 🎉');
+            alert('Thank you for subscribing! ✨');
             e.target.reset();
         });
 
-        console.log('Hksparkle website loaded! ✨');
+        console.log('Hksparkle website loaded! 💎');
     </script>
 </body>
 </html>

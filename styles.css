@@ -76,6 +76,22 @@ img {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 110px;
+    height: 45px;
+    transition: var(--transition);
+}
+
+.nav-logo:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
 .logo h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -181,9 +197,41 @@ img {
     padding: 0;
 }
 
+/* Logo Watermark - Big background logo */
+.hero-logo-watermark {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    opacity: 0.06;
+    color: #8b6f47;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-logo-watermark svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Brand Mark - Small logo on top of text */
+.hero-brand-mark {
+    width: 80px;
+    height: 90px;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-brand-mark svg {
+    width: 100%;
+    height: 100%;
+}
+
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 5;
     max-width: 1400px;
     width: 100%;
     padding: 0;
@@ -838,7 +886,19 @@ section {
 @media (max-width: 1024px) {
     .hero-title,
     .hero-title-2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+    
+    .hero-logo-watermark {
+        width: 400px;
+        height: 400px;
+        left: 50%;
+        opacity: 0.04;
+    }
+    
+    .hero-brand-mark {
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .hero-content {
@@ -883,6 +943,21 @@ section {
 }
 
 @media (max-width: 768px) {
+    .nav-logo {
+        width: 90px;
+        height: 38px;
+    }
+    
+    .hero-brand-mark {
+        width: 60px;
+        height: 70px;
+    }
+    
+    .hero-logo-watermark {
+        width: 300px;
+        height: 300px;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;

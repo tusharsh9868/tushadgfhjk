@@ -17,7 +17,14 @@
             <div class="nav-container">
                 <div class="logo">
                     <a href="index.html">
-                        <h1>Hksparkle</h1>
+                        <svg class="nav-logo" viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg">
+                            <g transform="translate(60, 10)">
+                                <polygon points="0,-6 -6,-1 -4,4 0,7 4,4 6,-1" fill="none" stroke="#b8956a" stroke-width="1"/>
+                                <line x1="-6" y1="-1" x2="6" y2="-1" stroke="#b8956a" stroke-width="0.6"/>
+                            </g>
+                            <text x="60" y="32" text-anchor="middle" font-family="Playfair Display, serif" font-size="18" font-style="italic" fill="#b8956a" font-weight="500">HK</text>
+                            <text x="60" y="45" text-anchor="middle" font-family="Poppins, sans-serif" font-size="6" letter-spacing="2.5" fill="#2c2c2c" font-weight="400">SPARKLES</text>
+                        </svg>
                     </a>
                 </div>
                 
@@ -63,8 +70,46 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Logo Watermark Background -->
+        <div class="hero-logo-watermark">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Diamond on top -->
+                <g transform="translate(100, 30)">
+                    <polygon points="0,-15 -12,-3 -8,8 0,15 8,8 12,-3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="-12" y1="-3" x2="12" y2="-3" stroke="currentColor" stroke-width="1"/>
+                    <line x1="-8" y1="8" x2="0" y2="-15" stroke="currentColor" stroke-width="0.8"/>
+                    <line x1="8" y1="8" x2="0" y2="-15" stroke="currentColor" stroke-width="0.8"/>
+                    <line x1="-12" y1="-3" x2="0" y2="15" stroke="currentColor" stroke-width="0.8"/>
+                    <line x1="12" y1="-3" x2="0" y2="15" stroke="currentColor" stroke-width="0.8"/>
+                    <!-- Sparkles -->
+                    <g fill="currentColor">
+                        <polygon points="-25,-15 -23,-10 -18,-12 -23,-14"/>
+                        <polygon points="25,-20 27,-15 32,-17 27,-19"/>
+                    </g>
+                </g>
+                <!-- HK Letters -->
+                <text x="100" y="115" text-anchor="middle" font-family="Playfair Display, serif" font-size="55" font-style="italic" fill="currentColor" font-weight="500">HK</text>
+                <!-- SPARKLES text -->
+                <text x="100" y="155" text-anchor="middle" font-family="Poppins, sans-serif" font-size="14" letter-spacing="6" fill="currentColor" font-weight="400">SPARKLES</text>
+            </svg>
+        </div>
+
         <div class="hero-content">
             <div class="hero-text">
+                <!-- Brand Logo Mark -->
+                <div class="hero-brand-mark">
+                    <svg viewBox="0 0 60 70" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(30, 12)">
+                            <polygon points="0,-8 -8,-2 -5,5 0,9 5,5 8,-2" fill="none" stroke="#b8956a" stroke-width="1.2"/>
+                            <line x1="-8" y1="-2" x2="8" y2="-2" stroke="#b8956a" stroke-width="0.8"/>
+                            <line x1="-5" y1="5" x2="0" y2="-8" stroke="#b8956a" stroke-width="0.6"/>
+                            <line x1="5" y1="5" x2="0" y2="-8" stroke="#b8956a" stroke-width="0.6"/>
+                        </g>
+                        <text x="30" y="50" text-anchor="middle" font-family="Playfair Display, serif" font-size="24" font-style="italic" fill="#b8956a" font-weight="500">HK</text>
+                        <text x="30" y="65" text-anchor="middle" font-family="Poppins, sans-serif" font-size="6" letter-spacing="2" fill="#b8956a" font-weight="400">SPARKLES</text>
+                    </svg>
+                </div>
+
                 <span class="hero-subtitle">TIMELESS BEAUTY. MODERN YOU.</span>
                 <h2 class="hero-title">A Symphony of</h2>
                 <h2 class="hero-title-2"><span class="gold-italic">Brilliance</span> and Elegance</h2>

@@ -81,6 +81,58 @@ img {
     align-items: center;
 }
 
+.logo-link {
+    display: block;
+    text-decoration: none;
+}
+
+.brand-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    transition: var(--transition);
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-diamond {
+    width: 32px;
+    height: 24px;
+}
+
+.logo-diamond svg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.logo-hk {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #b8956a;
+    line-height: 1;
+}
+
+.logo-sparkles {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    color: #2c2c2c;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
 .nav-logo {
     width: 110px;
     height: 45px;
@@ -203,30 +255,90 @@ img {
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 500px;
     height: 600px;
-    opacity: 0.06;
+    opacity: 0.08;
     color: #8b6f47;
     z-index: 1;
     pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero-logo-watermark svg {
+.watermark-diamond {
+    width: 200px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.watermark-diamond svg {
     width: 100%;
     height: 100%;
+}
+
+.watermark-hk {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 12rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #8b6f47;
+    line-height: 0.9;
+    margin-bottom: 10px;
+}
+
+.watermark-sparkles {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 12px;
+    color: #8b6f47;
+    font-weight: 400;
 }
 
 /* Brand Mark - Small logo on top of text */
 .hero-brand-mark {
-    width: 80px;
-    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease 0.2s both;
 }
 
-.hero-brand-mark svg {
+.brand-mark-diamond {
+    width: 50px;
+    height: 42px;
+    margin-bottom: 4px;
+}
+
+.brand-mark-diamond svg {
     width: 100%;
     height: 100%;
+}
+
+.brand-mark-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.brand-hk {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #b8956a;
+    line-height: 1;
+}
+
+.brand-sparkles {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: #b8956a;
+    font-weight: 500;
+    margin-top: 4px;
 }
 
 .hero-content {
@@ -890,15 +1002,29 @@ section {
     }
     
     .hero-logo-watermark {
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 450px;
         left: 50%;
-        opacity: 0.04;
+        opacity: 0.05;
+    }
+    
+    .watermark-hk {
+        font-size: 9rem;
+    }
+    
+    .watermark-sparkles {
+        font-size: 1.5rem;
+        letter-spacing: 8px;
     }
     
     .hero-brand-mark {
+        align-items: center;
         margin-left: auto;
         margin-right: auto;
+    }
+    
+    .brand-mark-text {
+        align-items: center;
     }
     
     .hero-content {
@@ -943,19 +1069,51 @@ section {
 }
 
 @media (max-width: 768px) {
-    .nav-logo {
-        width: 90px;
-        height: 38px;
+    .logo-hk {
+        font-size: 1.3rem;
     }
     
-    .hero-brand-mark {
-        width: 60px;
-        height: 70px;
+    .logo-sparkles {
+        font-size: 0.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .logo-diamond {
+        width: 26px;
+        height: 20px;
+    }
+    
+    .brand-mark-diamond {
+        width: 40px;
+        height: 32px;
+    }
+    
+    .brand-hk {
+        font-size: 1.6rem;
+    }
+    
+    .brand-sparkles {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
     }
     
     .hero-logo-watermark {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 350px;
+    }
+    
+    .watermark-hk {
+        font-size: 6rem;
+    }
+    
+    .watermark-sparkles {
+        font-size: 1rem;
+        letter-spacing: 5px;
+    }
+    
+    .watermark-diamond {
+        width: 120px;
+        height: 100px;
     }
     
     .nav-menu {

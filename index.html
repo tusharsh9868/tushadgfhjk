@@ -16,8 +16,23 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <a href="index.html">
-                        <h1>Hksparkle</h1>
+                    <a href="index.html" class="logo-link">
+                        <div class="brand-logo">
+                            <div class="logo-diamond">
+                                <svg viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="20,2 8,12 14,26 20,28 26,26 32,12" fill="none" stroke="#b8956a" stroke-width="1.5"/>
+                                    <line x1="8" y1="12" x2="32" y2="12" stroke="#b8956a" stroke-width="1.2"/>
+                                    <line x1="14" y1="26" x2="20" y2="2" stroke="#b8956a" stroke-width="0.8"/>
+                                    <line x1="26" y1="26" x2="20" y2="2" stroke="#b8956a" stroke-width="0.8"/>
+                                    <line x1="8" y1="12" x2="20" y2="28" stroke="#b8956a" stroke-width="0.8"/>
+                                    <line x1="32" y1="12" x2="20" y2="28" stroke="#b8956a" stroke-width="0.8"/>
+                                </svg>
+                            </div>
+                            <div class="logo-text">
+                                <span class="logo-hk">HK</span>
+                                <span class="logo-sparkles">SPARKLES</span>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 
@@ -63,18 +78,60 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Logo Watermark Background -->
+        <div class="hero-logo-watermark">
+            <div class="watermark-diamond">
+                <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50,5 20,30 35,70 50,75 65,70 80,30" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <line x1="20" y1="30" x2="80" y2="30" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="35" y1="70" x2="50" y2="5" stroke="currentColor" stroke-width="1"/>
+                    <line x1="65" y1="70" x2="50" y2="5" stroke="currentColor" stroke-width="1"/>
+                    <line x1="20" y1="30" x2="50" y2="75" stroke="currentColor" stroke-width="1"/>
+                    <line x1="80" y1="30" x2="50" y2="75" stroke="currentColor" stroke-width="1"/>
+                </svg>
+            </div>
+            <div class="watermark-hk">HK</div>
+            <div class="watermark-sparkles">SPARKLES</div>
+        </div>
+
         <div class="hero-content">
             <div class="hero-text">
-                <span class="hero-subtitle">New Collection 2026</span>
-                <h2 class="hero-title">Elegance Meets Style</h2>
-                <p class="hero-description">Discover our latest collection of premium fashion pieces designed to make you sparkle</p>
+                <!-- Brand Logo Mark -->
+                <div class="hero-brand-mark">
+                    <div class="brand-mark-diamond">
+                        <svg viewBox="0 0 60 50" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="30,3 12,18 22,42 30,45 38,42 48,18" fill="none" stroke="#b8956a" stroke-width="1.8"/>
+                            <line x1="12" y1="18" x2="48" y2="18" stroke="#b8956a" stroke-width="1.3"/>
+                            <line x1="22" y1="42" x2="30" y2="3" stroke="#b8956a" stroke-width="0.8"/>
+                            <line x1="38" y1="42" x2="30" y2="3" stroke="#b8956a" stroke-width="0.8"/>
+                            <line x1="12" y1="18" x2="30" y2="45" stroke="#b8956a" stroke-width="0.8"/>
+                            <line x1="48" y1="18" x2="30" y2="45" stroke="#b8956a" stroke-width="0.8"/>
+                            <!-- Sparkles -->
+                            <g fill="#b8956a">
+                                <polygon points="5,8 6,11 9,9 6,7"/>
+                                <polygon points="52,5 53,8 56,7 53,5"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="brand-mark-text">
+                        <span class="brand-hk">HK</span>
+                        <span class="brand-sparkles">SPARKLES</span>
+                    </div>
+                </div>
+
+                <span class="hero-subtitle">TIMELESS BEAUTY. MODERN YOU.</span>
+                <h2 class="hero-title">A Symphony of</h2>
+                <h2 class="hero-title-2"><span class="gold-italic">Brilliance</span> and Elegance</h2>
+                <p class="hero-description">Uncover our array of precious jewelry that<br>celebrates your unique glow and grace.</p>
                 <div class="hero-buttons">
-                    <a href="#collections" class="btn btn-primary">Shop Now</a>
-                    <a href="#new-arrivals" class="btn btn-secondary">New Arrivals</a>
+                    <a href="#collections" class="btn btn-primary">SHOP NOW</a>
+                    <a href="#new-arrivals" class="btn btn-link">EXPLORE COLLECTION</a>
                 </div>
             </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=1200&h=900&fit=crop&q=90" alt="Hksparkle Jewelry Model" class="hero-model">
+            </div>
         </div>
-        <div class="hero-overlay"></div>
     </section>
 
     <!-- Categories Section -->

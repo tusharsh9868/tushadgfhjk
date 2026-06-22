@@ -76,6 +76,74 @@ img {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+}
+
+.brand-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    transition: var(--transition);
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-diamond {
+    width: 32px;
+    height: 24px;
+}
+
+.logo-diamond svg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+}
+
+.logo-hk {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #b8956a;
+    line-height: 1;
+}
+
+.logo-sparkles {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 3px;
+    color: #2c2c2c;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.nav-logo {
+    width: 110px;
+    height: 45px;
+    transition: var(--transition);
+}
+
+.nav-logo:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
 .logo h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -170,90 +238,252 @@ img {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&h=1080&fit=crop') center/cover;
+    min-height: 90vh;
+    background: #ebe0d3;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     position: relative;
     margin-top: 80px;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Logo Watermark - Big background logo */
+.hero-logo-watermark {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 600px;
+    opacity: 0.08;
+    color: #8b6f47;
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.watermark-diamond {
+    width: 200px;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.watermark-diamond svg {
+    width: 100%;
+    height: 100%;
+}
+
+.watermark-hk {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 12rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #8b6f47;
+    line-height: 0.9;
+    margin-bottom: 10px;
+}
+
+.watermark-sparkles {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 12px;
+    color: #8b6f47;
+    font-weight: 400;
+}
+
+/* Brand Mark - Small logo on top of text */
+.hero-brand-mark {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.brand-mark-diamond {
+    width: 50px;
+    height: 42px;
+    margin-bottom: 4px;
+}
+
+.brand-mark-diamond svg {
+    width: 100%;
+    height: 100%;
+}
+
+.brand-mark-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.brand-hk {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #b8956a;
+    line-height: 1;
+}
+
+.brand-sparkles {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: #b8956a;
+    font-weight: 500;
+    margin-top: 4px;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    color: white;
-    max-width: 800px;
-    padding: 0 20px;
+    z-index: 5;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center;
     animation: fadeInUp 1s ease;
+    min-height: 90vh;
+}
+
+.hero-text {
+    padding: 4rem 4rem 4rem 6rem;
 }
 
 .hero-subtitle {
-    font-size: 0.95rem;
-    letter-spacing: 3px;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: block;
-    color: var(--secondary-color);
-    font-weight: 500;
+    color: #a08968;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-title {
-    font-size: 4.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-size: 5rem;
+    margin-bottom: 0;
+    font-weight: 400;
     line-height: 1.1;
+    color: #2c2c2c;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-title-2 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #2c2c2c;
+    font-family: 'Playfair Display', serif;
+}
+
+.gold-italic {
+    color: #b8956a;
+    font-style: italic;
+    font-weight: 400;
 }
 
 .hero-description {
-    font-size: 1.2rem;
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    color: #5a4a3a;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.hero-image {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-model {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    gap: 2rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .btn {
-    padding: 1rem 2.5rem;
+    padding: 1.1rem 2.5rem;
     border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
+    border-radius: 0;
+    font-size: 0.85rem;
+    font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
     display: inline-block;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-primary {
-    background: var(--secondary-color);
+    background: #1a1a1a;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #c49d2e;
+    background: #b8956a;
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link {
+    background: transparent;
+    color: #2c2c2c;
+    padding: 1.1rem 1rem;
+    position: relative;
+}
+
+.btn-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+    right: 1rem;
+    height: 1px;
+    background: transparent;
+    transition: var(--transition);
+}
+
+.btn-link:hover {
+    color: #b8956a;
+}
+
+.btn-link:hover::after {
+    background: #b8956a;
 }
 
 .btn-secondary {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
 }
 
 /* Section Styling */
@@ -766,8 +996,57 @@ section {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero-title {
-        font-size: 3.5rem;
+    .hero-title,
+    .hero-title-2 {
+        font-size: 3rem;
+    }
+    
+    .hero-logo-watermark {
+        width: 350px;
+        height: 450px;
+        left: 50%;
+        opacity: 0.05;
+    }
+    
+    .watermark-hk {
+        font-size: 9rem;
+    }
+    
+    .watermark-sparkles {
+        font-size: 1.5rem;
+        letter-spacing: 8px;
+    }
+    
+    .hero-brand-mark {
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .brand-mark-text {
+        align-items: center;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .hero-text {
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+    
+    .hero-image {
+        height: 500px;
+    }
+    
+    .hero-description {
+        max-width: 100%;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
     }
     
     .collection-grid {
@@ -790,6 +1069,53 @@ section {
 }
 
 @media (max-width: 768px) {
+    .logo-hk {
+        font-size: 1.3rem;
+    }
+    
+    .logo-sparkles {
+        font-size: 0.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .logo-diamond {
+        width: 26px;
+        height: 20px;
+    }
+    
+    .brand-mark-diamond {
+        width: 40px;
+        height: 32px;
+    }
+    
+    .brand-hk {
+        font-size: 1.6rem;
+    }
+    
+    .brand-sparkles {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+    }
+    
+    .hero-logo-watermark {
+        width: 250px;
+        height: 350px;
+    }
+    
+    .watermark-hk {
+        font-size: 6rem;
+    }
+    
+    .watermark-sparkles {
+        font-size: 1rem;
+        letter-spacing: 5px;
+    }
+    
+    .watermark-diamond {
+        width: 120px;
+        height: 100px;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -830,15 +1156,35 @@ section {
     
     .hero {
         margin-top: 70px;
-        height: 80vh;
+        min-height: auto;
+        padding: 3rem 0;
     }
     
-    .hero-title {
+    .hero-content {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .hero-text {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+    
+    .hero-title,
+    .hero-title-2 {
         font-size: 2.5rem;
     }
     
     .hero-description {
         font-size: 1rem;
+    }
+    
+    .hero-image {
+        height: 400px;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
     }
     
     .section-title {
@@ -870,7 +1216,8 @@ section {
 }
 
 @media (max-width: 480px) {
-    .hero-title {
+    .hero-title,
+    .hero-title-2 {
         font-size: 2rem;
     }
     
